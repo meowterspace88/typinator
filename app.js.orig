@@ -5,12 +5,30 @@ const express = require('express');
 const formidable = require('formidable');
 const removeMd = require('remove-markdown');
 const server = http.createServer();
+<<<<<<< HEAD
 const form = document.getElementById('form1');
 const input = form.querySelector('input');
 const form2 = document.getElementById('form2');
 const plainText = removeMd(markdown);
 
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const markdown = input.value;
+  markdown.textContent = text;
+});
+
+form2.addEventListener("input", (e) => {
+  e.preventDefault();
+  plainText
+});
+
+=======
+const markdown = ();
+const plainText = removeMd(markdown);
+
+
+>>>>>>> 6e5ff52a1781cf8dce181d07196a86d5662e3f73
 
 server.on('request', (request, response) => {
   res.writeHead(200, {'Content-Type': 'text/html'})
