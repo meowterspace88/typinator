@@ -11,6 +11,17 @@ const form2 = document.getElementById('form2');
 const plainText = removeMd(markdown);
 
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const markdown = input.value;
+  markdown.textContent = text;
+});
+
+form2.addEventListener("input", (e) => {
+  e.preventDefault();
+  plainText
+});
+
 
 server.on('request', (request, response) => {
   res.writeHead(200, {'Content-Type': 'text/html'})
