@@ -1,5 +1,10 @@
-const removeMd = require("remove-markdown");
-const markdown = "# This is a heading\n\nThis is a paragraph with [a link](http://www.disney.com/) in it.";
-const plainText = removeMd(markdown);
+const testMarkdown = require("/Users/arunyan/Desktop/TEST.txt");
 
-console.log('text', plainText);
+// print File
+
+// remove special markdown characters
+var result = testMarkdown.replace("#", "").replace("(", "").replace(")", "").replace(">", "").replace("*", "").replace("[", "").replace("]", "");
+
+console.log(result);
+
+// ignore [nl]
