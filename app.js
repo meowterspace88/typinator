@@ -10,14 +10,15 @@ const input = form.querySelector('input');
 // const form2 = document.getElementById('form2');
 // const plainText = removeMd(markdown);
 
-form.addEventListener("paste", (e) => {
-  e.preventDefault();
-  const markdown = input.value;
-  const form2 = document.getElementById('form2');
-  form2.textContent = text;
-  // markdown.textContent = text;
-});
-
+function removeMarkdown() {
+  form.addEventListener("paste", (e) => {
+    e.preventDefault();
+    const markdown = input.value;
+    const form2 = document.getElementById('form2');
+    form2.textContent = markdown;
+    // markdown.textContent = text;
+  });
+};
 // form2.addEventListener("input", (e) => {
 //   e.preventDefault();
 //   // plainText
