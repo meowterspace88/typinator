@@ -10,11 +10,11 @@ const input = form.querySelector('input');
 // const form2 = document.getElementById('form2');
 // const plainText = removeMd(markdown);
 
-form.addEventListener("paste", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const markdown = input.value;
+  const text = input.value;
   const form2 = document.getElementById('form2');
-  form2.textContent = markdown;
+  form2.textContent = text;
   // markdown.textContent = text;
 });
 
