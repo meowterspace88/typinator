@@ -7,20 +7,21 @@
 // const server = http.createServer();
 const form = document.getElementById('form1');
 const input = form.querySelector('input');
-const form2 = document.getElementById('form2');
+// const form2 = document.getElementById('form2');
 // const plainText = removeMd(markdown);
 
-
-form.addEventListener("submit", (e) => {
+form.addEventListener("paste", (e) => {
   e.preventDefault();
   const markdown = input.value;
-  markdown.textContent = text;
+  const form2 = document.getElementById('form2');
+  form2.textContent = text;
+  // markdown.textContent = text;
 });
 
-form2.addEventListener("input", (e) => {
-  e.preventDefault();
-  plainText
-});
+// form2.addEventListener("input", (e) => {
+//   e.preventDefault();
+//   // plainText
+// });
 
 
 // server.on('request', (request, response) => {

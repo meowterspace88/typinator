@@ -3,7 +3,6 @@
 
 <head>
   <title>Strip HTML</title>
-  <link href="css/css.css" rel="stylesheet">
 </head>
 
 <body>
@@ -11,8 +10,7 @@
   <p>Paste your typinator text here!</p>
 
   <form id="form1">
-    <input type="text" name="paste"/>
-    <input type="submit" value="submit" onclick="convert()">
+    <input type="text" name="paste" onpaste="e()"/>
   </form>
 
   <form id="form2">
