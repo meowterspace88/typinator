@@ -12,9 +12,9 @@ const input = form.querySelector('input');
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const text = input.value;
+  const markdown = input.value;
   const form2 = document.getElementById('form2');
-  form2.textContent = text;
+  form2.textContent = markdown;
   // markdown.textContent = text;
 });
 
