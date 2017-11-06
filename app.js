@@ -9,11 +9,12 @@ const form = document.getElementById("form1");
 const input = form.querySelector("input");
 const form2 = document.getElementById("form2");
 
-form.onchange = function convertMarkdown() {
+form.onchange = function convertMarkdown(markdown) {
   e.preventDefault();
   const markdown = input.value;
   const plainText = removeMd(markdown);
   form2.textContent = plainText;
+  return plainText;
 };
 
 
