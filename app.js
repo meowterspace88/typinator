@@ -12,8 +12,8 @@ const form2 = document.getElementById("form2");
 form.onchange = function convertMarkdown() {
   e.preventDefault();
   const markdown = input.value;
-  const plainText = removeMd(markdown);
-  form2.textContent = plainText;
+  // const plainText = removeMd(markdown);
+  form2.textContent = markdown;
 };
 
 
