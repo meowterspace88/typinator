@@ -1,10 +1,23 @@
-const testMarkdown = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
-
-// print File
+// text content to be converted - test
+const text = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
 
 // remove special markdown characters
-var result = testMarkdown.replace(/[(\[*)(\]>)(\)#)(\()]/g, "");
+const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "")
+console.log(specialChar);
 
-console.log(result);
+// repalce ]( pattern with a space
+const find = text.replace(/[(\]\()]/g, " ");
+console.log(find);
 
-// ignore [nl]
+// if "](" found then replace [, ) with "" and ]( with " "
+// const markLinks = text.replace(/[(\]\))]/g, function (_, link){
+// });
+
+// for (i = 0; i < text.length; i++) {
+// 	if (text[i] === "](") {
+// 		const removeLink = text.replace(/[(\]\()]/, " ");
+// 		console.log(removeLink[i]);
+// 		const removeBrackets = text.replace(/[\[\)]/, "");
+// 		console.log(removeBrackets[i]);
+// 	};
+// };

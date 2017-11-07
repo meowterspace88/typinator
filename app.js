@@ -8,12 +8,22 @@
 const form = document.getElementById("form1");
 const input = form.querySelector("input");
 const form2 = document.getElementById("form2");
+const result = testMarkdown.replace(/[(\[*)(\]>)(\)#)(\()]/g, "");
 
 form.onchange = function convertMarkdown() {
+  // prevent browser default
   e.preventDefault();
+
+  // contain text content
   const markdown = input.value;
-  // const plainText = removeMd(markdown);
+
+  // print text content in form1
+  
+
+  // print converted text in form2
   form2.textContent = text.markdown;
+
+
 };
 
 
