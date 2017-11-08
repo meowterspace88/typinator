@@ -1,26 +1,33 @@
 // text content to be converted - test
-const text = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
+// const practice = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
 // remove special markdown characters
-const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
-console.log(specialChar);
+// const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
+// console.log(specialChar);
 
 // repalce ]( pattern with a space
 // const find = text.replace(/[(\]\()]/g, " ");
 // console.log(find);
 
+function removeText () {
+	const form = document.getElementById("form1");
+	const input = form.querySelector("input");
+	const form2 = document.getElementById("form2");
 
-// promise
-// const myFirstPromise = new Promise((resolve, reject) => {
-	// if ]( found
+	// print text in form
+	
 
-function markdownText() {
+	// remove special markdown characters
+	const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
+
+	// Loop
 	for (i = 0; i < text.length; i++) {
 		if (text[i] === "](") {
-			console.log(specialChar);
+
 		};
 	};
-};
+}
 
+removeText();
 
 // if "](" found then replace [, ) with "" and ]( with " "
 // const markLinks = text.replace(/[(\]\))]/g, function (_, link){
