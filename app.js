@@ -8,7 +8,8 @@
 const form = document.getElementById("form1");
 const input = form.querySelector("input");
 const form2 = document.getElementById("form2");
-const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
+const practice = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
+const specialChar = practice.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
 const text = form.input.value;
 console.log(text);
 
