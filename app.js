@@ -8,7 +8,9 @@
 const form = document.getElementById("form1");
 const input = form.querySelector("input");
 const form2 = document.getElementById("form2");
-const result = testMarkdown.replace(/[(\[*)(\]>)(\)#)(\()]/g, "");
+const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
+const text = form.input.value;
+console.log(text);
 
 form.onchange = function convertMarkdown() {
   // prevent browser default
@@ -18,7 +20,7 @@ form.onchange = function convertMarkdown() {
   const markdown = input.value;
 
   // print text content in form1
-  
+  form.textContent = text.markdown;
 
   // print converted text in form2
   form2.textContent = text.markdown;
