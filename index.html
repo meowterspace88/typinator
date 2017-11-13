@@ -5,23 +5,69 @@
   <title>Strip HTML</title>
 </head>
 
+<style type="text/css">
+
+  .body {
+    margin: 0;
+  }
+
+</style>
+
 <body>
   <div class="wrapper">
     <header>
-      <p>Paste your typinator text here!</p>
+      <p><center>Paste your typinator text here!</center></p>
 
-      <form id="form1">
-        <input type="text" name="typinator"/>
-        <button type="submit" name="submit" value="submit">Submit</button>
-      </form>
-    </header>
-    <div>
-      <form id="form2">
-        <input type="text" name="output" onchange="convertMarkdown()"/>
-      </form>
+      <div class="forms">
+        <form id="form1">
+          <label>
+            <textarea id="ip1" type="text" name="input" value="" rows="20" cols="100"></textarea>
+          </label>
+
+          <div class="submit">
+            <center><button id="submit" type="submit" name="submit" value="submit">Submit</button></center>
+          </div>
+
+        </form>
+      </header>
+      <div>
+        <p><center>Plain text output:</center></p>
+
+        <form id="form2">
+          <label>
+            <textarea id="ip2" type="text" name="input2" value="" rows="20" cols="100"></textarea>
+          </label>
+        </div>
     </div>
   </div>
-  <script type="text/javascript" src="app.js"></script>
+  <script>
+    const submit = document.getElementById("submit");
+    const input = document.getElementById("ip1");
+    const input2 = document.getElementById("ip2");
+
+    submit.addEventListener('click', (e) => {
+      // prevent browser default
+      e.preventDefault();
+
+      // var for formula
+      const convertedMarkdown = input.value.replace(/[(\*)(\>)(\#)(\[)(\))(\_)(\<)]/g, "").replace(/[(\]\()]/g, " ");;
+
+      // contain text content
+      const text = input.value;
+
+      // find "](" in text
+      // for (i = 0; i < text.length; i++) {
+      //   if (text.length[i] === "](")
+      //     input2.value = convertedMarkdown;
+      //
+      // }
+
+      // print text content in form2
+      input2.value = convertedMarkdown;
+
+    });
+
+  </script>
 
 </body>
 </html>

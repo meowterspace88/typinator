@@ -9,10 +9,7 @@ const form = document.getElementById("form1");
 const input = form.querySelector("input");
 const form2 = document.getElementById("form2");
 // const practice = "Here's a link to [a website](http://foo.bar) ##heading and list * one * two * three * four ";
-const specialChar = practice.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
 // console.log(text);
-
-
 
 form.addEventListener('submit', (e) => {
   // prevent browser default
@@ -22,7 +19,7 @@ form.addEventListener('submit', (e) => {
   const text = input.value;
 
   // print text content in form1
-  form2.textContent = text.text;
+  form2.textContent = text.text
 });
 
 form2.onchange = function convertMarkdown() {
@@ -30,11 +27,12 @@ form2.onchange = function convertMarkdown() {
   e.preventDefault();
 
   // contain text content
-  const text = input.value;
+  const text = form.input.value;
 
   // print converted text in form2
   form2.textContent = text.text;
 
+  const specialChar = text.replace(/[(\*)(\>)(\#)(\[)(\))]/g, "").replace(/[(\]\()]/g, " ");
 };
 
 
